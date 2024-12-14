@@ -24,3 +24,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             return;
         };
     });
+     gsap.from("#about h2", {
+       opacity: 0,
+       y: -50,
+       duration: 1,
+     });
+     gsap.from("#about p", {
+       opacity: 0,
+       y: 50,
+       duration: 1,
+       delay: 0.5,
+     });
