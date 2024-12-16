@@ -1,3 +1,5 @@
+const { stagger } = require("framer-motion");
+
 const links = document.querySelectorAll('a[href^="#"]');
 
 links.forEach((link) => {
@@ -24,14 +26,27 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
             return;
         };
     });
-     gsap.from("#about h2", {
+     gsap.from("header", {
        opacity: 0,
        y: -50,
        duration: 1,
      });
-     gsap.from("#about p", {
+     gsap.from("section", {
        opacity: 0,
        y: 50,
        duration: 1,
-       delay: 0.5,
+       stagger: 0.3,
+       scrollTrigger: {
+       trigger: "section",
+       start: "top 80%"
+       }
      });
+
+      document.querySelectorAll(".hover\\:shadow-xl").forEach(project => {
+    project.addEventListener("mouseenter", () => {
+      gsap.to(project, { scale: 1.05, duration: 0.3 });
+    });
+    project.addEventListener("mouseleave", () => {
+      gsap.to(project, { scale: 1, duration: 0.3 });
+    });
+  });
