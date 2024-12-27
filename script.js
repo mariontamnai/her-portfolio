@@ -50,3 +50,33 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       gsap.to(project, { scale: 1, duration: 0.3 });
     });
   });
+  module.exports = {
+    darkMode: "class", // Enable dark mode via class
+    content: ["./*.html"],
+    theme: {
+      extend: {},
+    },
+    plugins: [],
+  };
+  const toggleButton = document.getElementById("theme-toggle");
+  const htmlElement = document.documentElement;
+
+
+  if (localStorage.theme === "dark") {
+    htmlElement.classList.add("dark");
+  } else {
+    htmlElement.classList.remove("dark");
+  }
+
+  // Toggle dark mode
+  toggleButton.addEventListener("click", () => {
+    if (htmlElement.classList.contains("dark")) {
+      htmlElement.classList.remove("dark");
+      localStorage.theme = "light";
+    } else {
+      htmlElement.classList.add("dark");
+      localStorage.theme = "dark";
+    }
+  });
+
+

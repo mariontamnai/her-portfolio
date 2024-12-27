@@ -3,13 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Portfolio of Marion Tamnai, a front-end developer showcasing skills and projects.">
+    <meta name="keywords" content="Front-End Developer, Web Developer, Portfolio, JavaScript, Tailwind CSS">
+    <meta name="author" content="Marion Tamnai">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marion Tamnai | Front-End Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
-<body class="bg-gray-900 text-grey font-sans">
+<body class="bg-gray-900 text-grey font-sans dark:bg-white dark:text-black">
     <!-- Hero Section -->
     <section class="h-screen flex flex-col justify-center items-center text-center">
         <h1 class="text-5xl font-bold">Hi, I&#39;m Marion Tamnai</h1>
@@ -31,7 +34,7 @@
         <section id="projects" class="py-16">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold mb-8">My Projects</h2>
-                <div class="grid gap-8 md:grid-cols-3">
+                <div class="grid gap-8 sm:grid-cols-1 md: grid-cols-2 lg:grid-cols-3">
                     <div class="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
                     <h3 class="text-xl font-bold">Responsive Educational Website</h3>
                     <p>A fully responsive website providing learning resources for students.
@@ -130,6 +133,10 @@
     <footer class="bg-blue-600 text-white py-6 text-center">
         <p>© 2024 Marion Tamnai. All Rights Reserved.</p>
     </footer>
+    <button id="theme-toggle" class="fixed top-4 right-4 bg-gray-700 text-white p-2 rounded-lg">
+        Toggle Theme
+    </button>
+
 
     <script src="script.js"></script>
     <script>
