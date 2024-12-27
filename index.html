@@ -4,54 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <!-- Link to Tailwind CSS for styling -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Marion Tamnai | Front-End Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 
-<body class="bg-gray-50 text-gray-900">
-    <!-- Header with Navigation -->
-    <header class="bg-blue-600 p-6 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-white text-3xl font-semibold">Marion Tamnai</h1>
-            <p>Junior Developer | JavaScript Enthusiast</p>
-            <nav>
-                <ul class="flex space-x-6 text-white font-medium">
-                    <li><a href="#about" class="hover:text-blue-300">About</a></li>
-                    <li><a href="#projects" class="hover:text-blue-300">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="resume.pdf"
-                class="mt-4 inline-block bg-white text-green-600 font-semibold px-6 py-2 rounded-full shadow-md hover:bg-green-100 transition duration-300">
-                Download Resume
-            </a>
+<body class="bg-gray-900 text-grey font-sans">
+    <!-- Hero Section -->
+    <section class="h-screen flex flex-col justify-center items-center text-center">
+        <h1 class="text-5xl font-bold">Hi, I&#39;m Marion Tamnai</h1>
+        <p class="mt-4 text-xl">A Front-End Developer passionate about creating delightful web experiences.</p>
+        <a href="#projects" class="mt-6 inline-block bg-blue-500 px-6 py-3 rounded-lg hover:bg-blue-400">View My
+            Work</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-800">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">About Me</h2>
+            <p class="text-lg text-gray-400">I am a Front-End Developer skilled in HTML, CSS, JavaScript, React Node.js and GSAP. I
+                enjoy bringing designs to life and creating user-friendly experiences.</p>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content Section -->
-    <main>
-        <section id="about" class="py-20 bg-gray-100">
-            <div class="container mx-auto px-6 text-center">
-                <img src="/Users/ke-c02rc5yhfvh3/Downloads/profile.jpg" alt="My Profile" class="rounded-full w-48 h-48 mx-auto shadow-md">
-                <h2 class="text-4xl font-semibold mb-4">About Me</h2>
-                <p class="text-lg">Hello! I’m a passionate developer with a love for creating interactive web applications.</p>
-                <ul class="flex space-x-4">
-                    <li class="text-green-600"><i class="fas fa-code text-3xl"></i></li>
-                    <li class="text-green-600"><i class="fab fa-js text-3xl"></i></li>
-                    <li class="text-green-600"><i class="fab fa-react text-3xl"></i></li>
-                </ul>
-            </div>
-        </section>
 
-        <section id="projects" class="py-20">
+        <section id="projects" class="py-16">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-semibold mb-8">My Projects</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <div class="p-4 bg-white shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
+                <h2 class="text-4xl font-bold mb-8">My Projects</h2>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <div class="p-4 bg-grey shadow-lg rounded-lg hover:shadow-xl transition-transform transform hover:scale-105">
                     <h3 class="text-xl font-bold">Responsive Educational Website</h3>
                     <p>A fully responsive website providing learning resources for students.
                     Built using HTML, CSS, and JavaScript, featuring a mobile-friendly layout
@@ -125,7 +106,7 @@
 
         <section id="contact" class="py-20 bg-gray-100">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl font-semibold mb-4">Contact Me</h2>
+                <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
                 <p class="text-lg mb-4">Feel free to reach out for collaborations or inquiries!</p>
                 <ul class="space-y-2">
                     <li>Email: <a href="mailto:youremail@example.com" class="text-green-600 hover:underline">mariontamnai@gmail.com</a></li>
@@ -151,6 +132,11 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        gsap.from("h1", { opacity: 0, y: -50, duration: 1 });
+            gsap.from("p", { opacity: 0, y: 50, delay: 0.5, duration: 1 });
+            gsap.from("a", { opacity: 0, scale: 0.8, delay: 1, duration: 1 });
+    </script>
 </body>
 
 </html>
