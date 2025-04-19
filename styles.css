@@ -32,8 +32,17 @@
     width: 100%;
   }
 
-  
-  
+  header h1 {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    margin-top: 0rem;
+  }
+  header p {
+    color: var(--accent);
+    margin: 0 auto;
+    font-size: 1.9rem;
+
+  }
 
   .profile-pic {
     width: 150px;
@@ -46,18 +55,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }  
-  header h1 {
-    margin: 0 auto;
-    font-size: 1.5rem;
-    margin-top: 0rem;
-  }
-  header p {
-    color: var(--accent);
-    margin: 0 auto;
-    font-size: 1.9rem;
-
-  }
+  } 
   nav.space-x-6 {
     display: flex;
     justify-content: center;
@@ -107,10 +105,6 @@
       padding: 1rem;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-    }
-
-    .header-left {
       text-align: center;
     }
 
