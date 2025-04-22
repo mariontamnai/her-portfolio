@@ -32,14 +32,22 @@
     width: 100%;
   }
 
+  .header-container {
+    max-width: 800px;  
+    margin: 0 auto;    
+    display: flex;
+    flex-direction: column;  
+    align-items: center;     
+}
+
   header h1 {
     margin: 0 auto;
     font-size: 1.5rem;
     margin-top: 0rem;
   }
-  header p {
+  .title {
     color: var(--accent);
-    margin: 0 auto;
+    margin: 0.5rem 0 1.5rem;
     font-size: 1.9rem;
 
   }
@@ -56,7 +64,7 @@
     margin-left: auto;
     margin-right: auto;
   } 
-  nav.space-x-6 {
+  nav{
     display: flex;
     justify-content: center;
     padding: 0.5rem 0;
@@ -109,10 +117,11 @@
     }
 
     .profile-pic {
-      margin-top: 1rem;
+      width: 120px;
+      height: 120px;
     }
     
-    nav.space-x-6 {
+    nav {
       justify-content: flex-start;
       gap: 1rem;
       padding-left: 0;
